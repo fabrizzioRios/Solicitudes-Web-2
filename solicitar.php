@@ -56,8 +56,13 @@
             <label for="txtDescripcion">Descripción:</label>
             <textarea name="txtDescripcion" id="txtDescripcion"></textarea>
         </p>
-        <button type="button" onclick="validarAgregar();">Solicitar</button>
-        <button type="button" >Cancelar</button>
+        <?php
+        $str = "";
+        
+        $str .= "<button type='button' onclick='validarAgregar();'>Solicitar</button>";
+        $str .= "<button type='button' ><a href='principal.php?u=".$_GET["u"]."'>Regresar</a></button>";
+        echo $str;
+        ?>
 
     </form>
 </body>

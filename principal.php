@@ -32,23 +32,26 @@
     <title>Lista de usuarios</title>
 </head>
 <body>
-    <h1>   
-        Hola
-    </h1>     
+   
 
     <section>
         <?php
 
             if(isset($_GET["u"])){
                 $u = $_GET["u"];
-        echo "<h1>Lista de usuarios</h1></br>";
                 if ($u == "admin") {
+                    echo "<h1>Hola ".$u."</h1>";
+                    echo "<h1>Lista de usuarios</h1></br>";
                     verUsuariosRegistrados();
+                    echo "<button><a href='solicitudes.php?u=".$_GET["u"]."'>Ver todas las solicitudes</a></button>";
                 }
                 else {
-                    echo "<button><a>Ver mis solicitudes</a></button>";
-                    echo "</br><a href='solicitar.php?u=".$_GET["u"]."'>realizar solicitudes</a>";                }
-            }
+                    echo "<h1>Hola ".$u."</h1>";
+                    echo "<button><a href='solicitudes.php?u=".$_GET["u"]."'>Ver mis solicitudes</a></button>";
+                    echo "</br><a href='solicitar.php?u=".$_GET["u"]."'>realizar solicitudes</a>";                
+                }
+    
+                }
 
         ?>
     </section>
